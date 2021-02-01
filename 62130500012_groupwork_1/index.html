@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic Vue Js - HelloWorld App</title>
+    <title>Basic Vue Js - Nike SNKRS</title>
     <!-- https://google.github.io/material-design-icons/#icon-font-for-the-web -->
     <!-- Using via Google Web Fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -14,23 +14,460 @@
     <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
     <!-- Vue CDN -->
     <script src="https://unpkg.com/vue@next"></script>
+
+
 </head>
+<style>
+    .navhover {
+        margin-bottom: 1.25em;
+        padding-bottom: 1.5em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        padding-top: 2.5em;
+        border-bottom-width: 2px;
+    }
+</style>
 
 <body>
-    <div id="app" class="h-screen w-full bg-gray-200 flex items-start justify-start">
-
-        <img src="images/1.jpg" class="w-1/3 h-full">
-        <div class="w-full flex items-center justify-end">
-            <i class="material-icons">face</i>
-            <p class="font-semibold text-xl tracking-wider uppercase px-3">{{msg}}</p>
+    <div class="h-screen">
+        <!-- Start NAV -->
+        <div class="flex items-center justify-between h-10 py-4 bg-white border-b flex-rol">
+            <div class="flex cursor-pointer ml-7">
+                <svg height="10px" width="12px" fill="#757575" viewBox="0 0 185.4 300">
+                    <path
+                        d="M160.4 300c-6.4 0-12.7-2.5-17.7-7.3L0 150 142.7 7.3c9.8-9.8 25.6-9.8 35.4 0 9.8 9.8 9.8 25.6 0 35.4L70.7 150 178 257.3c9.8 9.8 9.8 25.6 0 35.4-4.9 4.8-11.3 7.3-17.6 7.3z">
+                    </path>
+                </svg>
+                <a href="#" class="ml-1 text-xs font-semibold text-gray-500"> เยี่ยมชม Nike.com</a>
+            </div>
+            <i class="visible mr-10 fas fa-bars fa-2x md:invisible md:mr-0"></i>
+            <ul class="items-center hidden overflow-x-hidden font-semibold md:flex mr-7">
+                <li class="mt-1 mr-4">
+                    <div class="flex">
+                        <img class="w-5 h-5 mr-5 rounded-full"
+                            src="https://www.nike.com/assets/experience/dotcom-snkrs/ux/builds/avatar-placeholder.b0cccecfc9de26dc88dd98176e453824.png">
+                        <a href="#" class="mr-2 text-xs text-gray-500">Khomsan Chuechuphaeng</a>
+                    </div>
+                </li>
+                <li class="mr-5">
+                    <a href="" class="text-xs text-gray-500 hover:text-black">ความช่วยเหลือ</a>
+                </li>
+                <li class="mt-1 mr-4">
+                    <a href="#" class="">
+                        <svg width="18px" height="18px" fill="#757575" viewBox="0 0 25 32">
+                            <path
+                                d="M23.92 8.64L3.84 5.76 1.2 4.08Q.88 3.92.6 4t-.48.36-.12.6.4.48l2.56 1.6 4.48 11.2-1.6 4q-.16.4.08.76t.64.36h16.48q.32 0 .56-.24t.24-.56-.24-.56-.56-.24H7.68l1.12-2.72h14.32q.32 0 .56-.2t.24-.52l.64-8.8q.08-.32-.12-.56t-.52-.32zM22 23.6q-.88 0-1.56.64t-.68 1.56.68 1.56T22 28t1.56-.64.68-1.56-.68-1.56T22 23.6zm-12.32 0q-.96 0-1.6.64t-.64 1.56.64 1.56 1.56.64 1.56-.64.64-1.56-.64-1.56-1.52-.64z">
+                            </path>
+                        </svg></a>
+                </li>
+                <li class="mt-1">
+                    <div class="flex items-center">
+                        <svg data-qa="locale-selector-pin-icon" class="" fill="#757575" height="24" width="24"
+                            viewBox="0 0 17 32">
+                            <path
+                                d="M8.48 4Q6.16 4 4.24 5.16T1.16 8.28 0 12.6t1.44 4.6L8.56 28l7.12-10.8q1.36-2.24 1.36-4.6t-1.16-4.32-3.12-3.12T8.48 4z">
+                            </path>
+                        </svg>
+                        <a href="#" class="px-0 text-xs text-gray-400">ไทย</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- End Nav1 -->
+        <!-- Start NAV 2-->
+        <div class="flex flex-row items-center justify-between py-4 bg-white border-b h-14">
+            <div class="flex mb-1 cursor-pointer flew-col ml-7">
+                <a href="#" class="">
+                    <svg fill="#FF0017" fill-rule="nonzero" width="50px" height="35px" viewBox="0 0 50 34" role="img">
+                        <title>เว็บ Nike Sneakers</title>
+                        <path
+                            d="M13.3.728c-2.102 2.34-3 3.732-3.482 5.389-.44 1.512-.207 2.76.671 3.626.697.69 1.437.947 2.717.947 1.041 0 1.932-.17 3.237-.615.715-.238 23.795-9.812 23.952-9.93a.03.03 0 0 0 0-.045c-.012-.012-5.075 1.3-11.254 2.918-6.174 1.612-11.468 2.986-11.763 3.048-.816.17-2.152.157-2.73-.025a2.52 2.52 0 0 1-1.605-1.505c-.126-.308-.145-.477-.145-1.086.007-.897.17-1.499.722-2.628.207-.42.37-.784.357-.797-.018-.012-.32.307-.677.703zM3.79 16.713c-2.184.495-3.67 2.434-3.771 4.93-.05 1.193.182 2.083.765 2.987.308.458 1.286 1.436 1.945 1.938 1.148.872 1.462 1.293 1.399 1.876-.044.364-.232.621-.602.797-.897.445-2.183-.107-3.231-1.387l-.232-.282v5.213l.42.132c.853.27 1.13.301 2.622.301 1.337 0 1.475-.012 1.914-.144 1.324-.414 2.403-1.317 3.005-2.503.113-.22.257-.54.32-.722l.119-.332v1.8l.006 1.807h4.266l.013-3.914.019-3.915 1.505 3.896 1.512 3.902 1.832.019 1.832.012V16.75h-4.266l-.013 3.551-.018 3.545-1.004-3.545-1.004-3.55H8.469v4.811c-.006 4.8-.006 4.818-.125 4.492-.301-.84-.904-1.606-1.85-2.346-.371-.289-.885-.697-1.149-.904-.621-.49-.89-.878-.89-1.292 0-.264.03-.345.225-.552.257-.289.54-.402.991-.395.496.012 1.242.407 1.794.953l.44.433v-4.686l-.402-.163c-.847-.333-1.324-.427-2.359-.452-.677-.013-1.091.006-1.355.063zM45.056 16.744c-.25.063-.702.232-.997.383-.91.451-1.794 1.418-2.196 2.396-.088.22-.163.408-.175.414-.013.013-.12-.182-.239-.439-.728-1.562-2.164-2.428-4.435-2.679-.464-.056-2.096-.069-5.515-.056l-4.855.019-1.073 2.283-1.073 2.278-.019-2.297-.012-2.296h-4.392v16.374h4.392v-3.438l.006-3.431 1.324 3.431 1.33 3.438h8.318l.02-2.246c.006-1.23.006-2.704 0-3.274-.007-.571.012-.992.037-.942.025.05.564 1.525 1.198 3.275l1.148 3.18 2.641.032c1.45.02 3.194.05 3.877.076 1.105.031 1.286.018 1.788-.1a4.936 4.936 0 0 0 3.275-2.592c.377-.753.515-1.361.552-2.365.082-2.152-.552-3.319-2.647-4.893-1.468-1.098-1.788-1.638-1.35-2.259.44-.62 1.463-.583 2.366.088.376.276 1.085 1.004 1.085 1.11 0 .032.032.057.063.057.038 0 .063-.878.063-2.503V17.27l-.364-.163c-.715-.32-1.324-.433-2.553-.458-.948-.019-1.205-.006-1.588.094zM31.041 27.773l-.018 3.375-1.487-3.588c-.822-1.97-1.493-3.608-1.493-3.639 0-.025.67-1.443 1.486-3.143l1.494-3.1.018 3.363c.007 1.851.007 4.881 0 6.732zm5.603-7.215c.608.345.928 1.035.853 1.87-.088 1.091-.778 1.844-1.688 1.85h-.364v-3.971l.433.032c.333.025.515.081.766.22zm6.198 4.869c.295.307.822.784 1.167 1.06.345.276.759.608.928.746.954.803.703 1.939-.477 2.152-.771.138-2.139-.615-2.766-1.524-.1-.145-.207-.257-.232-.257-.032 0-.063.614-.07 1.36l-.018 1.356-.96-1.989c-.533-1.098-.954-1.995-.941-2.001.652-.326.834-.458 1.248-.86.377-.37.534-.59.747-1.016l.27-.546.282.477c.157.27.515.722.822 1.042z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+            <div class="flex items-center">
+                <i class="visible mr-10 fas fa-bars fa-2x md:invisible md:mr-0"></i>
+                <ul class="hidden overflow-x-hidden font-semibold md:flex mr-78">
+                    <li class="ml-6 text-xs border-black navhover">
+                        <a href="#" class="text-sm text-gray-600 ">ฟีด</a>
+                    </li>
+                    <li class="ml-10 mr-8 text-xs border-white hover:border-black navhover">
+                        <a href="#" class="text-sm text-gray-600 ">สินค้าในสต็อก</a>
+                    </li>
+                    <li class="mr-8 text-xs border-white hover:border-black navhover">
+                        <a href="#" class="px-0 text-sm text-gray-600">สินค้าที่กำลังจะมา</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center">
+                <ul class="mr-8">
+                    <li class="p-1">
+                        <div class="flex">
+                            <a href="#" class="">
+                                <svg width="18px" height="18px" fill="#757575" class="feed-icon" viewBox="0 0 24 24">
+                                    <path d="M0 18.64h24V24H0v-5.36zM0 0h24v16H0V0z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Nav 2 -->
+        <!-- Start Content -->
+        <!-- Col 1-->
+        <div class="flex mt-6 ml-7 mr-7">
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/8aa300aa-aee7-479e-a069-65aec3968ead/-air-jordan-1-low-se-black-and-white.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/aab36986-97c6-4009-be22-c63cd8ebdedc/-air-jordan-1-mid-se-black-and-white.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/877a7610-9b37-4c15-94f9-2d8db0dcdbd3/-dunk-low-disrupt-gym-red.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/7a270b0d-fecd-41f3-8c74-77b4f0ed1aaf/-dunk-high-dark-curry.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/63a66b95-a5f4-4d0d-916d-f2bdfbc0537a/-dunk-low-disrupt-desert-sand-.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/5f5efc00-4052-4fe6-9253-d78d1ac15e91/-air-jordan-9-university-gold-.jpg">
+                </a>
+            </div>
+        </div>
+        <!-- End col 1-->
+        <!-- Col 2-->
+        <div class="flex ml-7 mr-7">
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/437380ee-fa6b-4992-90d1-6a5c6e13211a/-air-force11-custom-uptown.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/77f3c27d-bb4b-42b6-88db-62ae9a16ac19/-blazer-mid-77-leopard-.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/67e8f8b2-87c2-45f3-af1d-4cfbd79a7cc7/-blazer-mid-77-snakeskin-.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/eb2ab455-3ddb-4fe2-aa0e-e97c13c0e041/-air-force-1-pixel-sail-snake-.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/606e28f4-78b8-4b44-a999-5ecc7fc60861/-air-force-1-pixel-leopard-.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/717e1369-4ca7-4a4a-9c13-5455e679efba/-fontanka-edge-light-arctic-pink.jpg">
+                </a>
+            </div>
+        </div>
+        <!-- End col 2-->
+        <!-- Col 3-->
+        <div class="flex ml-7 mr-7">
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/6c13023d-1771-4db5-b651-9c1798185268/-dunk-low-medium-curry.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/f5c514bb-c302-48cf-ac32-1a817f5e2757/-air-force-1-silver-snake.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/a0926891-5ff7-4a6f-935b-9d5b8cbf605f/-air-jordan-4-taupe-haze.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/w_960,c_limit,f_auto/f922e4a3-7902-4c3c-bfaf-6dbf97d73df8/-nocta-apparel-collection.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/235eb03b-502e-439f-b329-e40e8c756b95/-air-jordan-4-starfish-.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/4b4c3960-1568-431d-85fb-b08aefda73d0/-dunk-low-disrupt-siren-red-.jpg">
+                </a>
+            </div>
+        </div>
+        <!-- End col 3-->
+        <!-- Col 4-->
+        <div class="flex ml-7 mr-7">
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/4aea6ec0-c9da-4629-be4c-32628336b3c1/-kyrie-7-rayguns.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/a216c1f4-ec96-4209-8a2d-9f9e936ef491/-dunk-high-x-ambush-cosmic-fuchsia.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/609e565b-e436-4052-9a54-f76cd51b4ce1/-air-max-95-ndstrkt-black.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/4855b977-6966-47cd-a614-f47ed95fde95/-air-jordan-13-starfish.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/6966c9c8-1366-42bc-9d2b-57a39dc8766e/-blazer-mid-rebel-spring-festival-.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/c905b5b8-0699-41b4-b1eb-bc7a5759c3ce/-air-flight-89-rayguns.jpg">
+                </a>
+            </div>
+        </div>
+        <!-- End col 4-->
+        <!-- Col 5-->
+        <div class="flex mb-8 ml-7 mr-7">
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/500c6b9d-99e7-40f0-90fc-42d7b2b046a0/-air-jordan-1-zoom-rust-.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/0cd2c72a-fbb4-4587-9a95-bf7dd4cc2325/-lebron-18-the-chosen-2.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/cda34f0c-b40b-46cd-9ef9-e437c580c96b/-dunk-low-disrupt-photon-dust.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/8fc34cae-d857-45a2-84f8-9299a93fd2bc/-air-max-97-x-undefeated-white.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/da29aea2-fd92-4199-923d-6e52e86dcef8/dunk-high-football-grey-release-date-.jpg">
+                </a>
+            </div>
+            <div class="w-full h-full mb-2 mr-2 bg-gray-400 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+                <a class="flex items-center justify-center" href="#">
+                    <img
+                        src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/e7cbd5a8-e61b-4cc1-af7c-94dbdf0dc200/-dunk-high-vast-grey.jpg">
+                </a>
+            </div>
+        </div>
+        <!-- End col 5-->
+        <!-- MoreInformation -->
+        <div class="pt-12 pb-11">
+            <a href="#">
+                <p class="text-base text-center">โหลดเพิ่มเติม</p>
+            </a>
+        </div>
+        <!-- End MoreInformation -->
+        <!-- Footer -->
+        <div class="flex flex-col bg-black bg-opacity-95">
+            <div class="px-12 pt-6 mt-4 text-white h-72 ml-52 mr-52">
+                <div class="flex flex-row justify-between h-48 mb-2.5">
+                    <div class="flex flex-col mx-3 my-2">
+                        <div class="flex flex-row">
+                            <ul>
+                                <li class="text-sm my-2.5">
+                                    <a href="#">
+                                        ค้นหาร้านค้า
+                                    </a>
+                                </li>
+                                <li class="text-sm my-2.5">
+                                    <a href="#">
+                                        สมัครเป็นสมาชิก
+                                    </a>
+                                </li>
+                                <li class="text-sm my-2.5">
+                                    <a href="#">
+                                        ลงทะเบียนเพื่อรับข่าวสาร
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="text-sm my-2.5 ml-28">
+                                    <a href="#">
+                                        รับความช่วยเหลือ
+                                    </a>
+                                </li>
+                                <li class="ml-28 text-sm text-gray-100 text-opacity-50 my-2.5 hover:text-white">
+                                    <a href="#">
+                                        สถานะคำสั่งซื้อ
+                                    </a>
+                                </li>
+                                <li class="ml-28 text-sm text-gray-100 text-opacity-50 my-2.5 hover:text-white">
+                                    <a href="#">
+                                        การส่งมอบ
+                                    </a>
+                                </li>
+                                <li class="ml-28 text-sm text-gray-100 text-opacity-50 my-2.5 hover:text-white">
+                                    <a href="#">
+                                        การคืนสินค้า
+                                    </a>
+                                </li>
+                                <li class="ml-28 text-sm text-gray-100 text-opacity-50 my-2.5 hover:text-white">
+                                    <a href="#">
+                                        ทางเลือกการชำระเงิน
+                                    </a>
+                                </li>
+                                <li class="ml-28 text-sm text-gray-100 text-opacity-50 my-2.5 hover:text-white">
+                                    <a href="#">
+                                        ติดต่อเรา
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="my-2 text-sm ml-36">
+                                    <a href="#">
+                                        เกี่ยวกับ NIKE
+                                    </a>
+                                </li>
+                                <li class="ml-36 text-sm text-gray-100 text-opacity-50 my-2.5 hover:text-white">
+                                    <a href="#">
+                                        ข่าวสาร
+                                    </a>
+                                </li>
+                                <li class="ml-36 text-sm text-gray-100 text-opacity-50 my-2.5 hover:text-white">
+                                    <a href="#">
+                                        ร่วมงานกับเรา
+                                    </a>
+                                </li>
+                                <li class="ml-36 text-sm text-gray-100 text-opacity-50 my-2.5 hover:text-white">
+                                    <a href="#">
+                                        ร่วมลงทุนกับเรา
+                                    </a>
+                                </li>
+                                <li class="ml-36 text-sm text-gray-100 text-opacity-50 my-2.5 hover:text-white">
+                                    <a href="#">
+                                        ความยั่งยืน
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-row mx-3 my-2 ">
+                        <a href="#" class="mr-4">
+                            <svg class="text-gray-500 transition duration-200 fill-current social-link-icon hover:text-white"
+                                width="30px" fill="#7e7e7e" height="30px" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0C9.813 0 7.8.533 5.96 1.6A11.793 11.793 0 0 0 1.6 5.96C.533 7.8 0 9.813 0 12s.533 4.2 1.6 6.04a11.793 11.793 0 0 0 4.36 4.36C7.8 23.467 9.813 24 12 24s4.2-.533 6.04-1.6a11.793 11.793 0 0 0 4.36-4.36C23.467 16.2 24 14.187 24 12s-.533-4.2-1.6-6.04a11.793 11.793 0 0 0-4.36-4.36C16.2.533 14.187 0 12 0zm6 9.28v.4c0 1.387-.333 2.72-1 4a8.186 8.186 0 0 1-2.84 3.12c-1.333.853-2.827 1.28-4.48 1.28a8.535 8.535 0 0 1-4.56-1.28h.72c1.387 0 2.613-.427 3.68-1.28-.64 0-1.213-.2-1.72-.6-.507-.4-.867-.92-1.08-1.56l.56.16c.373 0 .64-.053.8-.16a2.67 2.67 0 0 1-1.72-1 2.913 2.913 0 0 1-.68-1.88c.427.267.88.4 1.36.4-.907-.533-1.36-1.36-1.36-2.48 0-.533.133-1.04.4-1.52.8.96 1.72 1.707 2.76 2.24a8.133 8.133 0 0 0 3.4.88c-.107-.16-.16-.4-.16-.72 0-.8.293-1.493.88-2.08s1.28-.88 2.08-.88 1.547.293 2.24.88c.48-.107 1.12-.347 1.92-.72-.213.747-.64 1.28-1.28 1.6H18c.747-.16 1.28-.32 1.6-.48-.533.693-1.067 1.253-1.6 1.68z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" class="mr-4">
+                            <svg class="text-gray-500 transition duration-200 fill-current social-link-icon hover:text-white"
+                                width="30px" fill="#7e7e7e" height="30px" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0C9.813 0 7.8.533 5.96 1.6A11.793 11.793 0 0 0 1.6 5.96C.533 7.8 0 9.813 0 12s.533 4.2 1.6 6.04a11.793 11.793 0 0 0 4.36 4.36C7.8 23.467 9.813 24 12 24s4.2-.533 6.04-1.6a11.793 11.793 0 0 0 4.36-4.36C23.467 16.2 24 14.187 24 12s-.533-4.2-1.6-6.04a11.793 11.793 0 0 0-4.36-4.36C16.2.533 14.187 0 12 0zm3.12 12h-2v7.2H10.4V12H8.64V9.52h1.76V8c0-1.12.187-1.92.56-2.4.427-.587 1.2-.88 2.32-.88h2V7.2h-1.2c-.427 0-.693.067-.8.2-.107.133-.16.387-.16.76v1.2h2.16L15.12 12z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" class="mr-4">
+                            <svg class="text-gray-500 transition duration-200 fill-current social-link-icon hover:text-white"
+                                width="30px" fill="#7e7e7e" height="30px" viewBox="0 0 24 24">
+                                <path
+                                    d="M11.28 17.6a.604.604 0 0 1-.2.24.43.43 0 0 1-.24.08c-.08 0-.133-.027-.16-.08a.557.557 0 0 1-.04-.24v-2.96h-.72v3.28a1 1 0 0 0 .12.52c.08.133.2.2.36.2.16 0 .307-.053.44-.16.133-.107.28-.24.44-.4v.48H12v-3.92h-.72v2.96zM6.96 14v-.8H9.6v.8h-.88v4.56h-.88V14h-.88zm4.96-4.72c-.107 0-.2-.04-.28-.12a.384.384 0 0 1-.12-.28v-2.4c0-.053.027-.107.08-.16.053-.053.147-.08.28-.08.133 0 .24.027.32.08a.27.27 0 0 1 .12.24v2.32c0 .107-.04.2-.12.28a.384.384 0 0 1-.28.12zm2 8.32c0-.64.027-1.307.08-2 0-.107-.04-.2-.12-.28-.08-.08-.16-.12-.24-.12h-.12l-.24.16v2.4l.24.16.16.08c.107 0 .173-.027.2-.08.027-.053.04-.16.04-.32zm.08-3.04c.213 0 .387.08.52.24.133.16.2.4.2.72v2.24c0 .267-.053.48-.16.64a.422.422 0 0 1-.44.2 2.1 2.1 0 0 1-.48-.12.506.506 0 0 1-.28-.24v.32h-.8V13.2h.8v1.76c.107-.107.213-.2.32-.28a.532.532 0 0 1 .32-.12zm3.92 5.12c.267-.213.427-.907.48-2.08.053-.587.107-1.147.16-1.68 0-.48-.053-1.013-.16-1.6-.107-1.173-.28-1.893-.52-2.16-.24-.267-1.267-.453-3.08-.56l-2.64-.08-2.72.08c-1.813.107-2.84.293-3.08.56-.24.267-.413.987-.52 2.16a16.07 16.07 0 0 0-.08 1.6c0 .533.027 1.093.08 1.68.107 1.173.28 1.88.52 2.12.24.24 1.267.44 3.08.6l2.72.08 2.64-.08c1.813-.16 2.853-.347 3.12-.56v-.08zM8.4 4h-.96l1.12 3.6v2.24h.96v-2.4L10.64 4h-.96l-.56 2.32h-.08L8.4 4zm2.32 2.56V8.8c0 .373.107.667.32.88.213.213.507.32.88.32s.667-.107.88-.32c.213-.213.32-.507.32-.88V6.56c0-.32-.107-.587-.32-.8-.213-.213-.507-.32-.88-.32s-.667.107-.88.32c-.213.213-.32.48-.32.8zm3.12-.96v3.6a1 1 0 0 0 .12.52c.08.133.213.2.4.2.187 0 .36-.04.52-.12.16-.08.32-.2.48-.36v.48h.88V5.6h-.88v3.2a.523.523 0 0 1-.24.24.645.645 0 0 1-.28.08c-.08 0-.133-.013-.16-.04-.027-.027-.04-.093-.04-.2V5.52h-.8v.08zM12 0c2.187 0 4.2.533 6.04 1.6a11.793 11.793 0 0 1 4.36 4.36C23.467 7.8 24 9.813 24 12s-.533 4.2-1.6 6.04a11.793 11.793 0 0 1-4.36 4.36C16.2 23.467 14.187 24 12 24s-4.2-.533-6.04-1.6a11.793 11.793 0 0 1-4.36-4.36C.533 16.2 0 14.187 0 12s.533-4.2 1.6-6.04A11.793 11.793 0 0 1 5.96 1.6C7.8.533 9.813 0 12 0zm4.56 16.08l-.08-.4c0-.16-.027-.28-.08-.36a.27.27 0 0 0-.24-.12.27.27 0 0 0-.24.12c-.053.08-.08.2-.08.36v.4h.72zm-.32-1.52c.32 0 .573.093.76.28.187.187.28.467.28.84v.96h-1.44v.8c0 .16.027.28.08.36.053.08.147.12.28.12.133 0 .227-.04.28-.12.053-.08.08-.227.08-.44v-.16h.72v.24c0 .373-.093.667-.28.88-.187.213-.453.32-.8.32-.347 0-.613-.107-.8-.32-.187-.213-.28-.507-.28-.88v-1.76c0-.32.107-.587.32-.8.213-.213.48-.32.8-.32z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" class="">
+                            <svg class="text-gray-500 transition duration-200 fill-current social-link-icon hover:text-white"
+                                width="30px" fill="#7e7e7e" height="30px" viewBox="0 0 24 24">
+                                <path
+                                    d="M16 12.48a4.723 4.723 0 0 1-.56 1.48 3.93 3.93 0 0 1-1.04 1.16 3.428 3.428 0 0 1-1.92.68 3.628 3.628 0 0 1-1.96-.48 3.414 3.414 0 0 1-1.4-1.48c-.48-.96-.587-1.973-.32-3.04H7.68l.08 5.52c0 .107.04.213.12.32.08.107.173.16.28.16h8.32c.107 0 .213-.053.32-.16.107-.107.16-.213.16-.32V10.8h-1.12c.16.533.213 1.093.16 1.68zm-3.68 2c.64 0 1.2-.24 1.68-.72s.72-1.053.72-1.72a2.56 2.56 0 0 0-.68-1.76c-.453-.507-1.013-.76-1.68-.76s-1.24.24-1.72.72-.72 1.053-.72 1.72.227 1.253.68 1.76c.453.507 1 .76 1.64.76h.08zm4.16-7.6h-1.12c-.107 0-.213.053-.32.16-.107.107-.16.213-.16.32v1.36c.107.213.267.32.48.32h1.12c.16 0 .28-.053.36-.16a.532.532 0 0 0 .12-.32v-1.2c0-.107-.053-.213-.16-.32-.107-.107-.213-.16-.32-.16zM12 0C9.813 0 7.8.533 5.96 1.6A11.793 11.793 0 0 0 1.6 5.96C.533 7.8 0 9.813 0 12s.533 4.2 1.6 6.04a11.793 11.793 0 0 0 4.36 4.36C7.8 23.467 9.813 24 12 24s4.2-.533 6.04-1.6a11.793 11.793 0 0 0 4.36-4.36C23.467 16.2 24 14.187 24 12s-.533-4.2-1.6-6.04a11.793 11.793 0 0 0-4.36-4.36C16.2.533 14.187 0 12 0zm6.24 16.88l-.08.08v.08a.926.926 0 0 1-.28.68 1.3 1.3 0 0 1-.68.36H7.52a.871.871 0 0 1-.68-.32 1.536 1.536 0 0 1-.36-.72l-.08-.16.08-9.84c0-.267.093-.507.28-.72.187-.213.413-.347.68-.4h9.68a1.3 1.3 0 0 1 .68.36 1.3 1.3 0 0 1 .36.68l.08 9.92z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-row justify-between pb-3 px-3 mt-2.5 border-t border-gray-100 border-opacity-5">
+                    <div class="flex flex-row items-end text-white my-4 mt-1.5">
+                        <svg height="15px" width="18px" fill="#ffffff" viewBox="0 0 42 58"
+                            class="text-white transition duration-200 cursor-pointer hover:text-white">
+                            <path
+                                d="M21 0C9.4 0 0 9.5 0 21.2 0 39.9 21 58 21 58s21-18.1 21-36.8C42 9.5 32.6 0 21 0zm0 31c-5.5 0-10-4.5-10-10s4.5-10 10-10 10 4.5 10 10-4.5 10-10 10z">
+                            </path>
+                        </svg><a href="#" class="ml-2 text-xs text-white mt-2.5">ไทย</a>
+                        <span class="ml-4 text-xs text-gray-100 text-opacity-50">© 2021 Nike, Inc. สงวนลิขสิทธิ์</span>
+                    </div>
+                    <div class="flex flex-row items-end my-4 text-white ">
+                        <a href="#" class="mx-3 text-xs text-gray-100 text-opacity-50 hover:text-white">คำแนะนำ</a>
+                        <a href="#"
+                            class="mx-3 text-xs text-gray-100 text-opacity-50 hover:text-white">เงื่อนไขการขาย</a>
+                        <a href="#"
+                            class="mx-3 text-xs text-gray-100 text-opacity-50 hover:text-white">ข้อกำหนดการใช้</a>
+                        <a href="#"
+                            class="mx-3 text-xs text-gray-100 text-opacity-50 hover:text-white">นโยบายความเป็นส่วนตัวของ
+                            Nike</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <!-- my main.js -->
-
-    <script src="main.js">
-    </script>
-
+    <!-- End Footer-->
+    <!-- End Content -->
 </body>
 
 </html>
