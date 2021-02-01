@@ -2,7 +2,7 @@
 
 Website reference 
 - https://www.nike.com/th/launch
-![alt text](62130500012_groupwork_1/images/screenshot-rocks.png?raw=true "Screenshot SNKRS")
+![alt text](/62130500012_groupwork_1/images/screenshot-rocks.png?raw=true "Screenshot SNKRS")
 
 #### Screenshot Reference : https://drive.google.com/file/d/1KzCQKYVh75yr5CBR-1vs7OmRkPNvo8Eg/view?usp=sharing
 
